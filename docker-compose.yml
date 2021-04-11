@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    image: mongo:4.2.8
+    container_name: movie_review_db
+    ports:
+      - '4001:27017'
+    volumes:
+      - ./data/db:/data/db
+    restart: always
+  movieReviewServer:
+    image: movie-review-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: movie-review-server
+    ports:
+      - '3001:3001'
+    links:
+      - db
+    depends_on:
+      - db
+    restart: 'no'
+  movieReviewClient:
+    image: movie-review-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: movie-review-client
+    ports:
+      - '3000:3000'
