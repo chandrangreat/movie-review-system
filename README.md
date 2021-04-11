@@ -4,7 +4,7 @@
 
 1. Clone this repo into your local system
 
-2. Download and unzip the data folder from this [link](https://drive.google.com/file/d/1tmfVnxOm_AQxA08FlebtG2nQBtxgSpKa/view?usp=sharing) and put this data folder in the local repo.
+2. Download and unzip the data folder from this **[link](https://drive.google.com/file/d/1tmfVnxOm_AQxA08FlebtG2nQBtxgSpKa/view?usp=sharing)** and put this data folder in the local repo.
 
 3. Ensure that you have installed Docker (version 19.03.13) and docker-compose (version 1.28.6) in your system.
 
